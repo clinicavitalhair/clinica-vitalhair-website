@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Fonts */
+    --font-dmSans: 'DM Sans', sans-serif;
+    --font-dmSerifDisplay: 'DM Serif Display', serif;
+
+    /* New Hex-based luxury brand colors (for utility use, e.g., Tailwind classes) */
+    --brand-charcoal: #2C2C2C;
+    --brand-sage-50: #F8F4F1;
+    --brand-sage-100: #EDEAE2;
+    --brand-sage-300: #D5D8D0;
+    --brand-gold: #C8B28E;
+    --accent-teal: #00B8A9;
+
+    /* HSL variables for component libraries (unchanged) */
+    --background: 0 0% 100%; /* pure white */
+    --foreground: 210 45% 11%;
+
+    --card: 40 33% 97%;
+    --card-foreground: 210 45% 11%;
+
+    --popover: 40 33% 97%;
+    --popover-foreground: 210 45% 11%;
+
+    --primary: 207 47% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 203 39% 44%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 20% 94%;
+    --muted-foreground: 215 19% 65%;
+
+    --accent: 182 44% 79%;
+    --accent-foreground: 210 45% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 20% 88%;
+    --input: 215 20% 92%;
+    --ring: 203 39% 50%;
+
+    --radius: 0.5rem;
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 207 53% 10%;
+    --foreground: 96 53% 90%;
+    --card: 207 53% 10%;
+    --card-foreground: 96 53% 90%;
+    --popover: 207 53% 10%;
+    --popover-foreground: 96 53% 90%;
+    --primary: 96 53% 90%;
+    --primary-foreground: 207 53% 10%;
+    --secondary: 182 44% 60%;
+    --secondary-foreground: 207 53% 10%;
+    --muted: 207 53% 15%;
+    --muted-foreground: 96 53% 70%;
+    --accent: 182 44% 79%;
+    --accent-foreground: 207 53% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 207 53% 20%;
+    --input: 207 53% 20%;
+    --ring: 182 44% 70%;
+  }
+
+  html {
+    background-color: #ffffff;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans transition-all duration-300 ease-out;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-full font-serifLuxury bg-brand-charcoal text-white hover:bg-brand-gold transition-all duration-300 ease-in-out shadow-md hover:shadow-lg;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 rounded-full font-serifLuxury border border-brand-charcoal text-brand-charcoal hover:bg-brand-gold hover:text-white transition-all duration-300 ease-in-out shadow-md hover:shadow-lg;
+  }
+}
+
